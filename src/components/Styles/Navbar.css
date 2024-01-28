@@ -1,0 +1,46 @@
+/* Navbar Styles */
+body{
+    margin: 0;
+}
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 99%;
+    top: 0;
+    z-index: 1000;
+    margin-right: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
+    border-bottom: 2px solid #fff;
+  }
+  
+  /* Optional: Add some spacing between the logo and links */
+  .logo {
+    margin-right: 20px;
+  }
+  
+  /* Optional: Style for an active link (you can add this class dynamically based on the current route) */
+  .nav-links a.active {
+    border-bottom: 2px solid #fff;
+  }
+  
