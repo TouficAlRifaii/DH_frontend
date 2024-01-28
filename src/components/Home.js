@@ -17,7 +17,7 @@ const Home = () => {
       }
 
       const response = await axios.get(
-        "http://192.168.1.104:5000/api/device/get_all",
+        process.env.REACT_APP_API_URL + "/api/device/get_all",
         {
           headers: {
             Authorization: `${authToken}`,
@@ -47,7 +47,7 @@ const Home = () => {
       }
 
       await axios.delete(
-        `http://192.168.1.104:5000/api/device/logout/${deviceId}`,
+        process.env.REACT_APP_API_URL + `/api/device/logout/${deviceId}`,
         {
           headers: {
             Authorization: `${authToken}`,
@@ -70,7 +70,7 @@ const Home = () => {
       }
 
       await axios.delete(
-        `http://192.168.1.104:5000/api/device/delete/${deviceId}`,
+        process.env.REACT_APP_API_URL + `/api/device/delete/${deviceId}`,
         {
           headers: {
             Authorization: `${authToken}`,

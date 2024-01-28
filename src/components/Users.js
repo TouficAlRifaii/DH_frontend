@@ -14,7 +14,7 @@ const Users = () => {
         return;
       }
       const response = await axios.get(
-        "http://192.168.1.104:5000/api/admin/get_devices",
+        process.env.REACT_APP_API_URL + "/api/admin/get_devices",
         {
           headers: {
             Authorization: `${authToken}`,
@@ -44,7 +44,7 @@ const Users = () => {
 
       // Send a block user request to the backend
       await axios.delete(
-        `http://192.168.1.104:5000/api/admin/block_user/${userId}`,
+        process.env.REACT_APP_API_URL + `/api/admin/block_user/${userId}`,
         {
           headers: {
             Authorization: `${authToken}`,
@@ -72,7 +72,7 @@ const Users = () => {
 
       // Send a block user request to the backend
       await axios.post(
-        `http://192.168.1.104:5000/api/admin/unblock_user/${userId}`,
+        process.env.REACT_APP_API_URL + `/api/admin/unblock_user/${userId}`,
         null,
         {
           headers: {
@@ -101,7 +101,7 @@ const Users = () => {
 
       // Send a logout device request to the backend
       await axios.delete(
-        `http://192.168.1.104:5000/api/admin/logout_device/${deviceId}`,
+        process.env.REACT_APP_API_URL + `/api/admin/logout_device/${deviceId}`,
         {
           headers: {
             Authorization: `${authToken}`,
@@ -129,7 +129,7 @@ const Users = () => {
 
       // Send a logout device request to the backend
       await axios.delete(
-        `http://192.168.1.104:5000/api/admin/logout_user/${userId}`,
+        process.env.REACT_APP_API_URL + `/api/admin/logout_user/${userId}`,
         {
           headers: {
             Authorization: `${authToken}`,
@@ -157,7 +157,7 @@ const Users = () => {
 
       // Send a logout device request to the backend
       await axios.delete(
-        `http://192.168.1.104:5000/api/admin/block_device/${deviceId}`,
+        process.env.REACT_APP_API_URL + `/api/admin/block_device/${deviceId}`,
         {
           headers: {
             Authorization: `${authToken}`,
@@ -185,7 +185,7 @@ const Users = () => {
 
       // Send a logout device request to the backend
       await axios.post(
-        `http://192.168.1.104:5000/api/admin/unblock_device/${deviceId}`,
+        process.env.REACT_APP_API_URL + `/api/admin/unblock_device/${deviceId}`,
         null,
         {
           headers: {

@@ -30,7 +30,7 @@ const Login = () => {
     };
     try {
       const response = await axios.post(
-        "http://192.168.1.104:5000/api/user/login",
+        process.env.REACT_APP_API_URL + "/api/user/login",
         updatedFormData
       );
 
@@ -49,7 +49,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://192.168.1.104:5000/api/user/login",
+        process.env.REACT_APP_API_URL + "/api/user/login",
         formData
       );
 

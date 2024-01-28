@@ -21,7 +21,7 @@ const Navbar = () => {
         }
 
         const response = await axios.get(
-          "http://192.168.1.104:5000/api/admin/validate",
+          process.env.REACT_APP_API_URL + "/api/admin/validate",
           {
             headers: {
               Authorization: `${authToken}`,
